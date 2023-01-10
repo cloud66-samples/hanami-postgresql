@@ -1,0 +1,197 @@
+# Logfile created on 2023-01-10 17:24:09 +0000 by logger.rb/v1.4.3
+[hanami_postgresql] [INFO] [2023-01-10 17:24:09 +0000] GET 200 38µs 127.0.0.1 / -
+[hanami_postgresql] [INFO] [2023-01-10 17:25:01 +0000] GET 200 43µs 127.0.0.1 / -
+[hanami_postgresql] [INFO] [2023-01-10 17:25:12 +0000] GET 200 37µs 127.0.0.1 / -
+[hanami_postgresql] [INFO] [2023-01-10 17:26:19 +0000] GET 200 38ms 127.0.0.1 / -
+[hanami_postgresql] [INFO] [2023-01-10 17:26:53 +0000] GET 200 31ms 127.0.0.1 / -
+[hanami_postgresql] [INFO] [2023-01-10 17:27:54 +0000] GET 200 32ms 127.0.0.1 /books -
+[hanami_postgresql] [INFO] [2023-01-10 17:28:55 +0000] GET 200 31ms 127.0.0.1 /books -
+[hanami_postgresql] [INFO] [2023-01-10 17:56:02 +0000] GET 200 52ms 127.0.0.1 /books -
+[hanami_postgresql] [INFO] [2023-01-10 17:59:09 +0000] GET 422 38ms 127.0.0.1 /books -
+  {:page=>"-1", :per_page=>"3000"}
+[hanami_postgresql] [INFO] [2023-01-10 17:59:09 +0000] GET 200 3ms 127.0.0.1 /books -
+  {:page=>"1", :per_page=>"3"}
+[hanami_postgresql] [INFO] [2023-01-10 18:00:21 +0000] GET 422 36ms 127.0.0.1 /books -
+  {:page=>"-1", :per_page=>"3000"}
+[hanami_postgresql] [INFO] [2023-01-10 18:00:21 +0000] GET 200 3ms 127.0.0.1 /books -
+  {:page=>"1", :per_page=>"3"}
+[hanami_postgresql] [INFO] [2023-01-10 18:08:49 +0000] GET 404 4ms 127.0.0.1 /books/1 -
+[hanami_postgresql] [INFO] [2023-01-10 18:08:49 +0000] GET 404 30µs 127.0.0.1 /books/1 -
+[hanami_postgresql] [ERROR] [2023-01-10 18:10:36 +0000] GET 500 0µs 127.0.0.1 /books/1 -
+  {:id=>"1"}
+  The relation does not contain any tuples (ROM::TupleCountMismatchError)
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rom-core-5.3.0/lib/rom/relation/loaded.rb:76:in `one!'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rom-core-5.3.0/lib/rom/relation/materializable.rb:49:in `one!'
+  /Users/dima/programming/cloud66/hanami-postgresql/hanami_postgresql/app/actions/books/show.rb:16:in `handle'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-controller-2.0.1/lib/hanami/action.rb:326:in `block in call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-controller-2.0.1/lib/hanami/action.rb:307:in `catch'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-controller-2.0.1/lib/hanami/action.rb:307:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-2.0.2/lib/hanami/slice/routing/resolver.rb:78:in `block in resolve_slice_action'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-router-2.0.2/lib/hanami/router.rb:108:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/dry-monitor-1.0.1/lib/dry/monitor/rack/middleware.rb:36:in `block in call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/dry-monitor-1.0.1/lib/dry/monitor/clock.rb:15:in `measure'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/dry-monitor-1.0.1/lib/dry/monitor/rack/middleware.rb:36:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-router-2.0.2/lib/hanami/middleware/app.rb:40:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-2.0.2/lib/hanami/slice.rb:758:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rack-test-2.0.2/lib/rack/test.rb:358:in `process_request'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rack-test-2.0.2/lib/rack/test.rb:165:in `custom_request'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rack-test-2.0.2/lib/rack/test.rb:114:in `get'
+  /Users/dima/.rvm/rubies/ruby-3.0.5/lib/ruby/3.0.0/forwardable.rb:238:in `get'
+  /Users/dima/programming/cloud66/hanami-postgresql/hanami_postgresql/spec/requests/books/show_spec.rb:27:in `block (3 levels) in <top (required)>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:263:in `instance_exec'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:263:in `block in run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:486:in `block in run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:352:in `call'
+  /Users/dima/programming/cloud66/hanami-postgresql/hanami_postgresql/spec/support/database_cleaner.rb:14:in `block (3 levels) in <top (required)>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/strategy.rb:30:in `cleaning'
+  /Users/dima/.rvm/rubies/ruby-3.0.5/lib/ruby/3.0.0/forwardable.rb:238:in `cleaning'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/cleaners.rb:34:in `block (2 levels) in cleaning'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/strategy.rb:30:in `cleaning'
+  /Users/dima/.rvm/rubies/ruby-3.0.5/lib/ruby/3.0.0/forwardable.rb:238:in `cleaning'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/cleaners.rb:34:in `block (2 levels) in cleaning'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/cleaners.rb:35:in `cleaning'
+  /Users/dima/.rvm/rubies/ruby-3.0.5/lib/ruby/3.0.0/forwardable.rb:238:in `cleaning'
+  /Users/dima/programming/cloud66/hanami-postgresql/hanami_postgresql/spec/support/database_cleaner.rb:13:in `block (2 levels) in <top (required)>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:457:in `instance_exec'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:457:in `instance_exec'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:390:in `execute_with'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:352:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:486:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:259:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:642:in `map'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:642:in `run_examples'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:607:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:608:in `block in run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:608:in `map'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:608:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:121:in `map'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/configuration.rb:2070:in `with_suite_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:116:in `block in run_specs'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/reporter.rb:74:in `report'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:115:in `run_specs'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:89:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:71:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:45:in `invoke'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/exe/rspec:4:in `<top (required)>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/bin/rspec:25:in `load'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/bin/rspec:25:in `<main>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/bin/ruby_executable_hooks:22:in `eval'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/bin/ruby_executable_hooks:22:in `<main>'
+[hanami_postgresql] [INFO] [2023-01-10 18:10:36 +0000] GET 404 43ms 127.0.0.1 /books/1 -
+  {:id=>"1"}
+[hanami_postgresql] [INFO] [2023-01-10 18:10:36 +0000] GET 200 2ms 127.0.0.1 /books/1 -
+  {:id=>"1"}
+[hanami_postgresql] [INFO] [2023-01-10 18:11:45 +0000] POST 201 83ms 127.0.0.1 /books -
+  {:book=>{:title=>"Practical Object-Oriented Design in Ruby", :author=>"Sandi Metz"}}
+[hanami_postgresql] [INFO] [2023-01-10 18:11:45 +0000] POST 422 5ms 127.0.0.1 /books -
+  {:book=>{:title=>nil}}
+[hanami_postgresql] [INFO] [2023-01-10 18:11:59 +0000] GET 200 31ms 127.0.0.1 /books -
+[hanami_postgresql] [INFO] [2023-01-10 18:12:04 +0000] GET 200 27ms 127.0.0.1 /books/1 -
+  {:id=>"1"}
+[hanami_postgresql] [ERROR] [2023-01-10 18:12:04 +0000] GET 500 0µs 127.0.0.1 /books/1 -
+  {:id=>"1"}
+  The relation does not contain any tuples (ROM::TupleCountMismatchError)
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rom-core-5.3.0/lib/rom/relation/loaded.rb:76:in `one!'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rom-core-5.3.0/lib/rom/relation/materializable.rb:49:in `one!'
+  /Users/dima/programming/cloud66/hanami-postgresql/hanami_postgresql/app/actions/books/show.rb:16:in `handle'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-controller-2.0.1/lib/hanami/action.rb:326:in `block in call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-controller-2.0.1/lib/hanami/action.rb:307:in `catch'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-controller-2.0.1/lib/hanami/action.rb:307:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-2.0.2/lib/hanami/slice/routing/resolver.rb:78:in `block in resolve_slice_action'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-router-2.0.2/lib/hanami/router.rb:108:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-router-2.0.2/lib/hanami/middleware/body_parser.rb:43:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/dry-monitor-1.0.1/lib/dry/monitor/rack/middleware.rb:36:in `block in call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/dry-monitor-1.0.1/lib/dry/monitor/clock.rb:15:in `measure'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/dry-monitor-1.0.1/lib/dry/monitor/rack/middleware.rb:36:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-router-2.0.2/lib/hanami/middleware/app.rb:40:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/hanami-2.0.2/lib/hanami/slice.rb:758:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rack-test-2.0.2/lib/rack/test.rb:358:in `process_request'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rack-test-2.0.2/lib/rack/test.rb:165:in `custom_request'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rack-test-2.0.2/lib/rack/test.rb:114:in `get'
+  /Users/dima/.rvm/rubies/ruby-3.0.5/lib/ruby/3.0.0/forwardable.rb:238:in `get'
+  /Users/dima/programming/cloud66/hanami-postgresql/hanami_postgresql/spec/requests/books/show_spec.rb:27:in `block (3 levels) in <top (required)>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:263:in `instance_exec'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:263:in `block in run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:511:in `block in with_around_and_singleton_context_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:468:in `block in with_around_example_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:486:in `block in run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:626:in `block in run_around_example_hooks_for'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:352:in `call'
+  /Users/dima/programming/cloud66/hanami-postgresql/hanami_postgresql/spec/support/database_cleaner.rb:14:in `block (3 levels) in <top (required)>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/strategy.rb:30:in `cleaning'
+  /Users/dima/.rvm/rubies/ruby-3.0.5/lib/ruby/3.0.0/forwardable.rb:238:in `cleaning'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/cleaners.rb:34:in `block (2 levels) in cleaning'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/strategy.rb:30:in `cleaning'
+  /Users/dima/.rvm/rubies/ruby-3.0.5/lib/ruby/3.0.0/forwardable.rb:238:in `cleaning'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/cleaners.rb:34:in `block (2 levels) in cleaning'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/database_cleaner-core-2.0.1/lib/database_cleaner/cleaners.rb:35:in `cleaning'
+  /Users/dima/.rvm/rubies/ruby-3.0.5/lib/ruby/3.0.0/forwardable.rb:238:in `cleaning'
+  /Users/dima/programming/cloud66/hanami-postgresql/hanami_postgresql/spec/support/database_cleaner.rb:13:in `block (2 levels) in <top (required)>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:457:in `instance_exec'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:457:in `instance_exec'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:390:in `execute_with'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:628:in `block (2 levels) in run_around_example_hooks_for'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:352:in `call'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:629:in `run_around_example_hooks_for'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/hooks.rb:486:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:468:in `with_around_example_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:511:in `with_around_and_singleton_context_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example.rb:259:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:646:in `block in run_examples'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:642:in `map'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:642:in `run_examples'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:607:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:608:in `block in run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:608:in `map'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/example_group.rb:608:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:121:in `map'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/configuration.rb:2070:in `with_suite_hooks'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:116:in `block in run_specs'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/reporter.rb:74:in `report'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:115:in `run_specs'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:89:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:71:in `run'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:45:in `invoke'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/gems/rspec-core-3.12.0/exe/rspec:4:in `<top (required)>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/bin/rspec:25:in `load'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/bin/rspec:25:in `<main>'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/bin/ruby_executable_hooks:22:in `eval'
+  /Users/dima/.rvm/gems/ruby-3.0.5@hanami-postgresql/bin/ruby_executable_hooks:22:in `<main>'
+[hanami_postgresql] [INFO] [2023-01-10 18:12:04 +0000] GET 404 3ms 127.0.0.1 /books/1 -
+  {:id=>"1"}
+[hanami_postgresql] [INFO] [2023-01-10 18:12:08 +0000] POST 201 80ms 127.0.0.1 /books -
+  {:book=>{:title=>"Practical Object-Oriented Design in Ruby", :author=>"Sandi Metz"}}
+[hanami_postgresql] [INFO] [2023-01-10 18:12:08 +0000] POST 422 5ms 127.0.0.1 /books -
+  {:book=>{:title=>nil}}
+[hanami_postgresql] [INFO] [2023-01-10 18:12:12 +0000] GET 200 27ms 127.0.0.1 /books -
+  {:page=>"1", :per_page=>"3"}
+[hanami_postgresql] [INFO] [2023-01-10 18:12:12 +0000] GET 422 6ms 127.0.0.1 /books -
+  {:page=>"-1", :per_page=>"3000"}
+[hanami_postgresql] [INFO] [2023-01-10 18:13:02 +0000] GET 200 27ms 127.0.0.1 /books -
+  {:page=>"1", :per_page=>"3"}
+[hanami_postgresql] [INFO] [2023-01-10 18:13:02 +0000] GET 422 6ms 127.0.0.1 /books -
+  {:page=>"-1", :per_page=>"3000"}
+[hanami_postgresql] [INFO] [2023-01-10 18:13:18 +0000] GET 422 29ms 127.0.0.1 /books -
+  {:page=>"-1", :per_page=>"3000"}
+[hanami_postgresql] [INFO] [2023-01-10 18:13:18 +0000] GET 200 3ms 127.0.0.1 /books -
+  {:page=>"1", :per_page=>"3"}
+[hanami_postgresql] [INFO] [2023-01-10 18:13:38 +0000] GET 422 28ms 127.0.0.1 /books -
+  {:page=>"-1", :per_page=>"3000"}
+[hanami_postgresql] [INFO] [2023-01-10 18:13:38 +0000] GET 200 3ms 127.0.0.1 /books -
+  {:page=>"1", :per_page=>"3"}
+[hanami_postgresql] [INFO] [2023-01-10 18:15:07 +0000] GET 200 26ms 127.0.0.1 /books -
+  {:page=>"1", :per_page=>"3"}
+[hanami_postgresql] [INFO] [2023-01-10 18:15:07 +0000] GET 422 6ms 127.0.0.1 /books -
+  {:page=>"-1", :per_page=>"3000"}
