@@ -1,0 +1,4 @@
+hanami:
+    configuration:
+        custom_build_command: bundle exec rake db:migrate
+        custom_deploy_command: bundle exec rake db:migrate
