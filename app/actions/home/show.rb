@@ -5,7 +5,7 @@ module HanamiPostgresql
     module Home
       class Show < HanamiPostgresql::Action
         def handle(*, response)
-          response.body = "Welcome to Bookshelf"
+          response.body = "Welcome to Bookshelf (master-copy)"
         end
       end
     end
