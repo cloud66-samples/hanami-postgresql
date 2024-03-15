@@ -5,7 +5,7 @@ module HanamiPostgresql
     module Home
       class Show < HanamiPostgresql::Action
         def handle(*, response)
-          response.body = "Welcome to Bookshelf (blue)"
+          response.body = "Welcome to Bookshelf (green)"
         end
       end
     end
